@@ -28,7 +28,7 @@ Vagrant::Config.run do |config|
   config.vm.provision :shell, :inline => "echo \"America/Los_Angeles\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
 
   # Update the server
-  config.vm.provision :shell, :inline => "apt-get update --fix-missing"
+  # config.vm.provision :shell, :inline => "apt-get update --fix-missing"
 
   ###
   #  Creates a basic LAMP stack with MySQL
