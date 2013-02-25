@@ -16,3 +16,9 @@
 [submodule "puppet/modules/stdlib"]
 	path = puppet/modules/stdlib
 	url = git://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "puppet/modules/puppi"]
+	path = puppet/modules/puppi
+	url = git@github.com:example42/puppi.git
+[submodule "puppet/modules/mysql"]
+	path = puppet/modules/mysql
+	url = git@github.com:puppetlabs/puppetlabs-mysql.git
