@@ -88,7 +88,8 @@ define ssmsites{
     }
 
     database { "ssm_${title}":
-        charset => 'latin1',
+        ensure  => 'present',
+        charset => 'utf8',
     }
 
 }
