@@ -11,6 +11,7 @@ include apache
 include php
 include mysql
 
+
 # Apache setup
 class {'apache::mod::php': }
 
@@ -26,6 +27,15 @@ a2mod { 'rewrite': ensure => present; }
 # PHP Extensions
 php::module { ['xdebug', 'mysql', 'curl', 'gd'] :
     notify => [ Service['httpd'], ],
+}
+
+php::conf { [ 'mysqli', 'pdo', 'pdo_mysql', ]:
+    require => Package['php-mysql'],
+    notify  => Service['httpd'],
+}
+php::conf{['version'] :
+    ensure => '5.3.5',
+    notify => Service['httpd'],
 }
 
 # MySQL Server
