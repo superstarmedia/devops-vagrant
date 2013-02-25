@@ -45,4 +45,19 @@ using a hostonly connection.
 This repo includes a submodule which contains all of our [Puppet manifests] and various 
 modules for building a LAMP stack (or something) close to that at least. 
 
+## Configuring GUI MySQL
+
+Connect via SSH
+
+* name: (give a descriptive name)
+* mysql host: 0.0.0.0
+* username: root
+* pwd: root
+* datbase: none
+* port: 3306
+* ssh host: 127.0.0.1
+* ssh user: vagrant
+* ssh key: ~/.vagrant.d/insecure_private_key
+* sshport: 2222
+
 ## TODO
