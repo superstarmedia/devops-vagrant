@@ -55,7 +55,7 @@ file { $docroot:
 
 $awsdir = 'aws-d7/public_html/'
 
-$writeable_dirs = ["${docroot}aws-d7/", "${docroot}aws-d7/public_html"]
+$writeable_dirs = ["${docroot}aws-d7/",]
 
 file { $writeable_dirs:
     ensure => "directory",
@@ -72,7 +72,13 @@ file { '/home/vagrant/testfile':
     content => "host name: ${hostname} \na this is OS: ${operatingsystem} \na this is fqdn: ${fqdn} \na this is domain name: ${domain}"
 }
 
-$client_names =["aws_d7", "clientone", "clienttwo", "clientthree"]
+$client_names =[
+    "aws_d7",
+    "dev.awsd7.com", 
+    "clientone",
+    "clienttwo",
+    "clientthree",
+]
 
 define ssmsites{
 
